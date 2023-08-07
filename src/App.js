@@ -62,7 +62,7 @@ export default function App() {
 
           setIsLoading(false);
         } catch (err) {
-          console.error(err.message);
+          console.log(err.message);
           if (err.name !== 'AbortError') setError(err.message);
         } finally {
           setIsLoading(false);
@@ -73,7 +73,7 @@ export default function App() {
         setError('');
         return;
       }
-
+      handleCloseMovie();
       fetchMovies();
 
       return function () {
