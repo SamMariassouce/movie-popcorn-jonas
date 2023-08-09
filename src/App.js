@@ -453,7 +453,7 @@ function Search({ query, setQuery }) {
       return () => document.addEventListener('keydown', callback);
     },
 
-    []
+    [setQuery]
   );
 
   return (
